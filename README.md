@@ -5,6 +5,7 @@ Annotate a class with @GenerateExtensibleFluentClass and the library will genera
 
 Example input:
 
+```java
 @GenerateExtensibleFluentClass
 public class MyFluent {
 
@@ -12,11 +13,14 @@ public class MyFluent {
         return this;
     }
 
-    public MyFluent doSomeOtherStuff() { return this;}
+    public MyFluent doSomeOtherStuff() { 
+        return this;
+    }
 }
+```
 
 Example output:
-
+```java
 @SuppressWarnings("all")
 class ExtensibleMyFluent<Self extends MyFluent> extends MyFluent {
   @Override
@@ -31,3 +35,4 @@ class ExtensibleMyFluent<Self extends MyFluent> extends MyFluent {
     return (Self) this;
   }
 }
+```
