@@ -1,5 +1,6 @@
 # fluentj
 A library for creating fluent interfaces in Java.
+This version is a proof of concept with (very) limited functionality.
 
 Annotate a class with @GenerateExtensibleFluentClass and the library will generate a subclass with a recursive generic signature to allow for easy extensions.
 
